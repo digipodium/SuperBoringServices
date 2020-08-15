@@ -45,14 +45,14 @@ public class SecondFragment extends Fragment {
             Intent i = new Intent(getActivity(), TimerBService.class);
             // binding service to activity
             getActivity().bindService(i, serviceConn, Context.BIND_AUTO_CREATE);
-            Toast.makeText(getActivity(), "service bound", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "service bound to activity", Toast.LENGTH_SHORT).show();
         });
         btnStopService.setOnClickListener(view3 -> {
             if(isServiceBound){
                 getActivity().unbindService(serviceConn);
                 isServiceBound = false;
             }
-            Toast.makeText(getActivity(), "service disconnected to activity", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "service disconnected from activity", Toast.LENGTH_SHORT).show();
         });
 
     }
