@@ -42,7 +42,7 @@ public class TimerBService extends Service {
         return hrs + ":" + min + ":" + sec + ":" + ms;
     }
 
-    private class TimeBinder extends Binder {
+    class TimeBinder extends Binder {
         TimerBService getService() {
             return TimerBService.this;
         }
